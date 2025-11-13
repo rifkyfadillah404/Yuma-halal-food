@@ -54,8 +54,8 @@ const FamilyTripDetail = () => {
 
   const currentService = services[currentServiceIndex]
 
-  const handleOrder = (serviceName) => {
-    const message = encodeURIComponent(`Halo, saya tertarik dengan layanan ${serviceName}`)
+  const handleOrder = () => {
+    const message = encodeURIComponent(`Halo, saya tertarik dengan layanan family trip yuma`)
     window.open(`https://wa.me/818039231907?text=${message}`, '_blank')
   }
 
@@ -176,21 +176,7 @@ const FamilyTripDetail = () => {
               >
                 <div>
                   <div className="mb-8">
-                    <div className="inline-block mb-4">
-                      <span className="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">
-                        Professional Service
-                      </span>
-                    </div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                      {currentService.name}
-                    </h3>
-                    <p className="text-lg text-gray-600 leading-relaxed">
-                      {currentService.description}
-                    </p>
-                  </div>
-
-                  <div className="mb-8">
-                    <h4 className="text-lg font-bold text-gray-900 mb-4">Keunggulan Layanan:</h4>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-6">Keunggulan Layanan:</h4>
                     <div className="space-y-3">
                       {currentService.features.map((feature, idx) => (
                         <motion.div
@@ -214,7 +200,7 @@ const FamilyTripDetail = () => {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    onClick={() => handleOrder(currentService.name)}
+                    onClick={handleOrder}
                     className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:from-green-600 hover:to-green-700 transition-all shadow-xl shadow-green-500/30 text-lg"
                   >
                     <FaWhatsapp size={24} />

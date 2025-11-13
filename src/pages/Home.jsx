@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-import Stats from '../components/Stats'
 import Services from '../components/Services'
 import About from '../components/About'
 import Clients from '../components/Clients'
@@ -41,7 +40,6 @@ const Home = () => {
     <>
       <Header isMobile={isMobile} scrollToSection={scrollToSection} />
       <Hero scrollToSection={scrollToSection} />
-      <Stats />
       <About />
       <Services />
       <Clients />

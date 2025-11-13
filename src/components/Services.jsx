@@ -1,42 +1,25 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const Services = () => {
   const menuItems = [
     {
-      name: 'Bento Halal',
-      price: '¥1,200',
-      description: 'Bento box halal dengan lauk pilihan',
-      image: '/assets/makanan.jpg'
+      name: 'Bento & Snack Halal',
+      description: 'Bento, kue kering, dan snack box halal premium',
+      image: '/assets/food/makanan.jpg',
+      link: '/bento-snack'
     },
     {
-      name: 'Kue Kering',
-      price: '¥800',
-      description: 'Nastar, kastengel, dan kue kering lainnya',
-      image: '/assets/nastar.jpg'
+      name: 'Muslim Aksesoris',
+      description: 'Paket lengkap aksesoris muslim premium',
+      image: '/assets/aksesoris/paket1.jpg',
+      link: '/muslim-aksesoris'
     },
     {
-      name: 'Snack Box',
-      price: '¥500',
-      description: 'Paket snack halal untuk acara',
-      image: '/assets/donut.jpg'
-    },
-    {
-      name: 'Souvenir Hijab',
-      price: 'Sesuai Stock',
-      description: 'Koleksi hijab cantik dari Tokyo',
-      image: '/assets/sovenir.jpg'
-    },
-    {
-      name: 'Tour Guide Service',
-      price: '¥15,000/hari',
-      description: 'Tour guide berpengalaman untuk keluarga',
-      image: '/assets/tour.png'
-    },
-    {
-      name: 'Rental Mobil + Itinerary',
-      price: 'Hubungi Kami',
-      description: 'Paket lengkap rental mobil dan planning trip',
-      image: '/assets/rental.png'
+      name: 'Family Trip Service',
+      description: 'Tour guide, rental mobil, dan itinerary planning lengkap',
+      image: '/assets/trip/trip1.jpg',
+      link: '/family-trip'
     }
   ]
 
@@ -80,16 +63,28 @@ const Services = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.name}</h3>
                 <p className="text-gray-600 mb-4">{item.description}</p>
                 <div className="flex justify-center">
-                  <motion.a 
-                    href={`https://wa.me/818039231907?text=Halo, saya tertarik dengan ${item.name}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-primary text-white px-8 py-2 rounded-full hover:bg-primary-dark transition font-semibold"
-                  >
-                    Pesan
-                  </motion.a>
+                  {item.link ? (
+                    <Link to={item.link}>
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="bg-primary text-white px-8 py-2 rounded-full hover:bg-primary-dark transition font-semibold"
+                      >
+                        Lihat Detail
+                      </motion.button>
+                    </Link>
+                  ) : (
+                    <motion.a 
+                      href={`https://wa.me/818039231907?text=Halo, saya tertarik dengan ${item.name}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="bg-primary text-white px-8 py-2 rounded-full hover:bg-primary-dark transition font-semibold"
+                    >
+                      Pesan
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>

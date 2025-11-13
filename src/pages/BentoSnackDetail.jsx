@@ -2,11 +2,9 @@ import { motion } from 'framer-motion'
 import { Link, useNavigate } from 'react-router-dom'
 import { FaArrowLeft, FaWhatsapp, FaCheckCircle, FaHome, FaUtensils, FaInfoCircle, FaEnvelope } from 'react-icons/fa'
 import ProductCarousel from '../components/ProductCarousel'
-import { useState } from 'react'
 
 const BentoSnackDetail = () => {
   const navigate = useNavigate()
-  const [currentProductIndex, setCurrentProductIndex] = useState(0)
 
   const handleNavigation = (section) => {
     navigate('/')
@@ -19,36 +17,20 @@ const BentoSnackDetail = () => {
   }
 
   const productImages = [
-    { src: '/assets/food/makanan.jpg', alt: 'Bento Halal Premium' },
-    { src: '/assets/food/nastar.jpg', alt: 'Kue Kering Nastar' },
-    { src: '/assets/food/donut.jpg', alt: 'Snack Box Donut' }
+    { src: '/assets/food/makanan.jpg', alt: 'Bento, cake and snack halal' },
+    { src: '/assets/food/nastar.jpg', alt: 'Bento, cake and snack halal' },
+    { src: '/assets/food/donut.jpg', alt: 'Bento, cake and snack halal' },
+    { src: '/assets/food/snack1.jpeg', alt: 'Bento, cake and snack halal' },
+    { src: '/assets/food/snack2.jpeg', alt: 'Bento, cake and snack halal' },
+    { src: '/assets/food/snack3.jpeg', alt: 'Bento, cake and snack halal' },
+    { src: '/assets/food/snack4.jpeg', alt: 'Bento, cake and snack halal' },
+    { src: '/assets/food/snack5.jpeg', alt: 'Bento, cake and snack halal' }
   ]
 
-  const products = [
-    {
-      name: 'Bento Halal Premium',
-      description: 'Bento box halal dengan nasi, ayam teriyaki, sayuran segar, dan telur',
-      image: '/assets/food/makanan.jpg',
-      features: ['100% Halal', 'Porsi Kenyang', 'Fresh Daily', 'Packaging Higienis']
-    },
-    {
-      name: 'Kue Kering Nastar',
-      description: 'Nastar premium dengan selai nanas pilihan, renyah dan lezat',
-      image: '/assets/food/nastar.jpg',
-      features: ['Bahan Premium', 'Tanpa Pengawet', 'Kemasan Eksklusif', 'Tahan Lama']
-    },
-    {
-      name: 'Snack Box Donut',
-      description: 'Paket snack donut halal untuk acara atau gift',
-      image: '/assets/food/donut.jpg',
-      features: ['100% Halal', 'Variasi Rasa', 'Cocok untuk Gift', 'Fresh & Soft']
-    }
-  ]
+  const features = ['100% Halal', 'Bahan Premium', 'Tanpa Pengawet', 'Packaging Higienis']
 
-  const currentProduct = products[currentProductIndex]
-
-  const handleOrder = (productName) => {
-    const message = encodeURIComponent(`Halo, saya ingin pesan ${productName}`)
+  const handleOrder = () => {
+    const message = encodeURIComponent(`Halo, saya ingin pesan Bento, cake and snack halal`)
     window.open(`https://wa.me/818039231907?text=${message}`, '_blank')
   }
 
@@ -133,7 +115,7 @@ const BentoSnackDetail = () => {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Halal Food Premium
+            Bento, cake and snack halal
             <span className="block text-primary">di Tokyo</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -153,15 +135,13 @@ const BentoSnackDetail = () => {
               <div className="bg-gray-50 p-6 md:p-8 flex items-center justify-center">
                 <div className="w-full">
                   <ProductCarousel 
-                    images={productImages} 
-                    onSlideChange={setCurrentProductIndex}
+                    images={productImages}
                   />
                 </div>
               </div>
 
               {/* Right Side - Product Details */}
               <motion.div 
-                key={currentProductIndex}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
@@ -175,17 +155,17 @@ const BentoSnackDetail = () => {
                       </span>
                     </div>
                     <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                      {currentProduct.name}
+                      Bento, cake and snack halal
                     </h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
-                      {currentProduct.description}
+                      Berbagai pilihan bento, kue, dan snack halal berkualitas tinggi dari Tokyo
                     </p>
                   </div>
 
                   <div className="mb-8">
                     <h4 className="text-lg font-bold text-gray-900 mb-4">Keunggulan Produk:</h4>
                     <div className="space-y-3">
-                      {currentProduct.features.map((feature, idx) => (
+                      {features.map((feature, idx) => (
                         <motion.div
                           key={idx}
                           initial={{ opacity: 0, x: -20 }}
@@ -207,7 +187,7 @@ const BentoSnackDetail = () => {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    onClick={() => handleOrder(currentProduct.name)}
+                    onClick={handleOrder}
                     className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-5 rounded-2xl font-bold flex items-center justify-center gap-3 hover:from-green-600 hover:to-green-700 transition-all shadow-xl shadow-green-500/30 text-lg"
                   >
                     <FaWhatsapp size={24} />

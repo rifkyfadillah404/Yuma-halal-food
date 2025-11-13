@@ -20,6 +20,19 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-8 flex justify-center"
+            >
+              <img 
+                src="/assets/orang.png" 
+                alt="Yuma Team" 
+                className="w-48 h-auto md:w-64 object-contain"
+              />
+            </motion.div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               Tentang Kami
             </h2>

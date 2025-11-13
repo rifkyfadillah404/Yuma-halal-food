@@ -30,7 +30,7 @@ const About = () => {
               <img 
                 src="/assets/orang.png" 
                 alt="Yuma Team" 
-                className="w-48 h-auto md:w-64 object-contain"
+                className="w-64 h-auto md:w-96 object-contain"
               />
             </motion.div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { IoLocationSharp, IoTime, IoLogoInstagram, IoLogoWhatsapp, IoPhonePortrait } from 'react-icons/io5'
+import { IoLocationSharp, IoTime, IoLogoInstagram, IoLogoWhatsapp } from 'react-icons/io5'
 
 const Contact = () => {
   return (
@@ -17,7 +17,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+            className="flex justify-center mb-12"
           >
             <motion.a 
               href="https://wa.me/818039231907" 
@@ -25,17 +25,9 @@ const Contact = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#25D366] text-white px-8 py-4 rounded-full hover:bg-[#20BA5A] transition font-semibold text-lg flex items-center justify-center gap-2"
+              className="bg-[#25D366] text-white px-12 py-4 rounded-full hover:bg-[#20BA5A] transition font-semibold text-lg flex items-center justify-center gap-2"
             >
               <IoLogoWhatsapp className="text-2xl" /> WhatsApp
-            </motion.a>
-            <motion.a 
-              href="tel:+818039231907"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-primary text-white px-8 py-4 rounded-full hover:bg-primary-dark transition font-semibold text-lg flex items-center justify-center gap-2"
-            >
-              <IoPhonePortrait className="text-2xl" /> Telepon
             </motion.a>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">

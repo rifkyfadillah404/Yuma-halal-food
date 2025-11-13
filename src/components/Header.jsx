@@ -18,10 +18,6 @@ const Header = ({ isMobile, scrollToSection }) => {
             <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-primary font-medium transition">Kontak</button>
           </nav>
         )}
-        
-        <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition font-medium">
-          Pesan Sekarang
-        </button>
       </div>
     </header>
   )

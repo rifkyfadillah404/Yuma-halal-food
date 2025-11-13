@@ -4,7 +4,7 @@ import { IoCalendar, IoPeople, IoGrid, IoCheckmarkCircle } from 'react-icons/io5
 const Stats = () => {
   const stats = [
     { 
-      number: '5+', 
+      number: '2+', 
       label: 'Tahun di Tokyo',
       icon: IoCalendar,
       color: 'from-blue-500 to-blue-600'

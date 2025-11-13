@@ -1,6 +1,6 @@
 const Header = ({ isMobile, scrollToSection }) => {
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50 w-full max-w-full">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img src="/assets/logo.jpg" alt="Yuma Halal Food" className="h-12 w-12 object-cover rounded-full" />

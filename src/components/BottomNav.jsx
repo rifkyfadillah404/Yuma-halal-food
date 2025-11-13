@@ -7,7 +7,7 @@ const BottomNav = ({ activeSection, scrollToSection }) => {
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50"
+      className="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-50 w-full max-w-full"
     >
       <div className="grid grid-cols-3 gap-1">
         <button 

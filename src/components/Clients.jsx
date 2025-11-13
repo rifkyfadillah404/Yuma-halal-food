@@ -9,7 +9,7 @@ const Clients = () => {
   const duplicatedClients = [...clients, ...clients, ...clients]
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-16 bg-white overflow-hidden w-full">
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}

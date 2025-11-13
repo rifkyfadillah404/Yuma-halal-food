@@ -90,29 +90,6 @@ const ProductCarousel = ({ images, onSlideChange }) => {
           </>
         )}
       </div>
-
-      {images.length > 1 && (
-        <div className="mt-4 grid grid-cols-3 gap-2">
-          {images.map((image, index) => (
-            <button
-              type="button"
-              key={index}
-              onClick={() => handleGoToSlide(index)}
-              className={`relative h-20 rounded-lg overflow-hidden transition-all ${
-                index === currentIndex
-                  ? 'ring-4 ring-primary scale-105'
-                  : 'opacity-60 hover:opacity-100 hover:scale-105'
-              }`}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover"
-              />
-            </button>
-          ))}
-        </div>
-      )}
     </div>
   )
 }

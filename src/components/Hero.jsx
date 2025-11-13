@@ -46,7 +46,7 @@ const Hero = ({ scrollToSection }) => {
             >
               <button 
                 onClick={() => scrollToSection('menu')}
-                className="bg-white text-primary px-10 py-4 rounded-full hover:bg-gray-100 transition-all font-bold text-lg shadow-xl hover:scale-105"
+                className="border-2 border-white text-white px-10 py-4 rounded-full hover:bg-white hover:text-primary transition-all font-bold text-lg hover:scale-105"
               >
                 Lihat Layanan
               </button>

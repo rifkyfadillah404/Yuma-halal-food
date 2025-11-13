@@ -3,11 +3,13 @@ import Home from './pages/Home'
 import BentoSnackDetail from './pages/BentoSnackDetail'
 import MuslimAksesorisDetail from './pages/MuslimAksesorisDetail'
 import FamilyTripDetail from './pages/FamilyTripDetail'
+import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white overflow-x-hidden">
         <Routes>
           <Route path="/" element={<Home />} />

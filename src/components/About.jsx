@@ -3,7 +3,7 @@ import { IoCheckmarkCircle } from 'react-icons/io5'
 
 const About = () => {
   const features = [
-    '100% Halal Certified',
+    '100% Halal',
     'Tour Guide Berpengalaman',
     'Lokasi Strategis Shibuya',
     'Layanan 24/7'

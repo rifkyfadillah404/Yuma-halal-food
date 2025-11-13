@@ -10,7 +10,7 @@ const Contact = () => {
             Siap Melayani Acara Anda
           </h2>
           <p className="text-lg mb-8 text-gray-300">
-            Hubungi kami untuk informasi halal food, souvenir hijab, atau booking family trip
+            Hubungi kami untuk informasi halal food, muslim aksesoris, atau booking family trip
           </p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}

@@ -41,7 +41,7 @@ const BentoSnackDetail = () => {
       name: 'Snack Box Donut',
       description: 'Paket snack donut halal untuk acara atau gift',
       image: '/assets/food/donut.jpg',
-      features: ['Halal Certified', 'Variasi Rasa', 'Cocok untuk Gift', 'Fresh & Soft']
+      features: ['100% Halal', 'Variasi Rasa', 'Cocok untuk Gift', 'Fresh & Soft']
     }
   ]
 
@@ -129,7 +129,7 @@ const BentoSnackDetail = () => {
         >
           <div className="inline-block mb-4">
             <span className="bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold">
-              100% Halal Certified
+              100% Halal
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -214,7 +214,7 @@ const BentoSnackDetail = () => {
                     Pesan via WhatsApp
                   </motion.button>
                   <p className="text-center text-sm text-gray-500">
-                    Fast response & 100% Halal Certified
+                    Fast response & 100% Halal
                   </p>
                 </div>
               </motion.div>

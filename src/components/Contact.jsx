@@ -17,7 +17,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center mb-12"
+            className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
           >
             <motion.a 
               href="https://wa.me/818039231907" 
@@ -29,8 +29,18 @@ const Contact = () => {
             >
               <IoLogoWhatsapp className="text-2xl" /> WhatsApp
             </motion.a>
+            <motion.a 
+              href="https://www.instagram.com/vajapan.food" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-4 rounded-full hover:from-purple-600 hover:to-pink-600 transition font-semibold text-lg flex items-center justify-center gap-2"
+            >
+              <IoLogoInstagram className="text-2xl" /> Instagram
+            </motion.a>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-2xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -52,24 +62,6 @@ const Contact = () => {
                 <IoTime className="text-2xl" /> Jam Operasional
               </h3>
               <p className="text-gray-300">Setiap Hari<br />09:00 - 21:00 JST</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <h3 className="font-bold text-xl mb-3 flex items-center gap-2">
-                <IoLogoInstagram className="text-2xl" /> Instagram
-              </h3>
-              <a 
-                href="https://www.instagram.com/vajapan.food" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white transition"
-              >
-                @vajapan.food
-              </a>
             </motion.div>
           </div>
         </div>
